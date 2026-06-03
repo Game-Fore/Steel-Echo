@@ -1,58 +1,10 @@
 fileFormatVersion: 2
-guid: 325201ef3e30dcb49bc6b36aaa1d704a
+guid: 5366dad7c1bf77240b725c35534b35d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5301830182342974167
-    second: spritesheet(1)_0
-  - first:
-      213: 9120263621951344784
-    second: spritesheet(1)_1
-  - first:
-      213: -5439467392780181022
-    second: spritesheet(1)_2
-  - first:
-      213: -6014649699893511219
-    second: spritesheet(1)_3
-  - first:
-      213: -2498292620558202464
-    second: spritesheet(1)_4
-  - first:
-      213: -225832828497836443
-    second: spritesheet(1)_5
-  - first:
-      213: 7516290004390650522
-    second: spritesheet(1)_6
-  - first:
-      213: 8335699423366770600
-    second: spritesheet(1)_7
-  - first:
-      213: 4390097939373978554
-    second: spritesheet(1)_8
-  - first:
-      213: 8003758613811047381
-    second: spritesheet(1)_9
-  - first:
-      213: 2631206172830160386
-    second: spritesheet(1)_10
-  - first:
-      213: -1470924824021044894
-    second: spritesheet(1)_11
-  - first:
-      213: -7228068539810515359
-    second: spritesheet(1)_12
-  - first:
-      213: -665244040368642249
-    second: spritesheet(1)_13
-  - first:
-      213: -4366766549768828660
-    second: spritesheet(1)_14
-  - first:
-      213: 776675375925202861
-    second: spritesheet(1)_15
-  - first:
-      213: -6847250675478012054
-    second: spritesheet(1)_16
+      213: 6261180780860757445
+    second: Pipes_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -85,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -99,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 22
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -148,188 +100,56 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hero_idle_1
+      name: Pipes_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 131
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7da5ff5e572e39940800000000000000
-      internalID: 5301830182342974167
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_idle_3
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 106
-        width: 12
+        x: 0
+        y: 61
+        width: 29
         height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 090d354617fa19e70800000000000000
-      internalID: 9120263621951344784
+      spriteID: 5c555bd3fbe24e650800000000000000
+      internalID: 6261180780860757445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_idle_2
+      name: Pipes_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71427b36b0db7a46859e30bf5f7adf4
+      internalID: -1574087391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_2
       rect:
         serializedVersion: 2
         x: 29
-        y: 131
-        width: 13
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2e1640ec9312384b0800000000000000
-      internalID: -5439467392780181022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_idle_4
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 106
-        width: 12
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dcbff6507fba78ca0800000000000000
-      internalID: -6014649699893511219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_walk_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 106
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a906ae1918445dd0800000000000000
-      internalID: -2498292620558202464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_walk_1
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 132
-        width: 13
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 566c3ce2d3eaddcf0800000000000000
-      internalID: -225832828497836443
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_walk_8
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 106
-        width: 12
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a92268c9fe93f4860800000000000000
-      internalID: 7516290004390650522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_walk_2
-      rect:
-        serializedVersion: 2
-        x: 91
-        y: 132
-        width: 15
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8af643c067a5ea370800000000000000
-      internalID: 8335699423366770600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_walk_9
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 106
-        width: 13
+        y: 84
+        width: 26
         height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -337,186 +157,296 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ab37f8de0d2ccec30800000000000000
-      internalID: 4390097939373978554
+      spriteID: e7270ddf15e2c1347b2b48b510e079fb
+      internalID: 627011596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_walk_3
+      name: Pipes_3
       rect:
         serializedVersion: 2
-        x: 112
-        y: 131
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5db2e24bd00131f60800000000000000
-      internalID: 8003758613811047381
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_walk_10
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 106
-        width: 16
+        x: 55
+        y: 84
+        width: 26
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2065b5ec21ce38420800000000000000
-      internalID: 2631206172830160386
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_walk_4
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 131
-        width: 12
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 261fbe47aa9369be0800000000000000
-      internalID: -1470924824021044894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_walk_5
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 131
-        width: 13
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 166fa6085fdb0bb90800000000000000
-      internalID: -7228068539810515359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_walk_6
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 131
-        width: 15
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 737a1e4e11494c6f0800000000000000
-      internalID: -665244040368642249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_jump_1
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 121
-        width: 12
-        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c0988f785f02663c0800000000000000
-      internalID: -4366766549768828660
+      spriteID: f24a6c8a3b0632d43a9177c2a413d64e
+      internalID: -24885429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_jump_2
+      name: Pipes_4
       rect:
         serializedVersion: 2
-        x: 214
-        y: 123
-        width: 18
+        x: 81
+        y: 84
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd301f1f82e2be418cfcc866b77e09f
+      internalID: 988795720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_5
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 84
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b4a9cc9430e634898acb25c521a132
+      internalID: -1970458614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_6
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 56
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f32dce89659c8143800f307da63a5a8
+      internalID: 899065166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 29
         height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: daf80dfa32e47ca00800000000000000
-      internalID: 776675375925202861
+      spriteID: dacd884e89077554fab12c1ca4681fd5
+      internalID: 581960716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_jump_3
+      name: Pipes_8
       rect:
         serializedVersion: 2
-        x: 235
-        y: 123
-        width: 19
+        x: 29
+        y: 29
+        width: 26
         height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a6f5418f9cda9f0a0800000000000000
-      internalID: -6847250675478012054
+      spriteID: c98894af27774ec4fb24243c950d9f47
+      internalID: 733604919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_9
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 29
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905675f340553ae4bb28f190d787805f
+      internalID: -297194483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_10
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 56
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48344b826987ca54fb54190470d44c0f
+      internalID: 533617739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_11
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 56
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299de35bf39354941bd4296aa1840ade
+      internalID: -1368931440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb96998786726e944a6ed8cab73b41c5
+      internalID: 98154266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_13
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 28
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1801961280f3c554890434fe95a7066d
+      internalID: 1274575163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dfe7ae24f937a4a9bcde3ff9398e69
+      internalID: 1148180180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes_15
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 0
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cac0e5b03e8164468abd8d0b129066a
+      internalID: -428291356
       vertices: []
       indices: 
       edges: []
@@ -525,7 +455,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2a929d1375d78a545b43fc25091c28c6
+    spriteID: 0e4185fbdc8938b4dabeb2d1650357d8
     internalID: 0
     vertices: []
     indices: 
@@ -535,23 +465,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hero_idle_1: 5301830182342974167
-      hero_idle_2: -5439467392780181022
-      hero_idle_3: 9120263621951344784
-      hero_idle_4: -6014649699893511219
-      hero_jump_1: -4366766549768828660
-      hero_jump_2: 776675375925202861
-      hero_jump_3: -6847250675478012054
-      hero_walk_1: -225832828497836443
-      hero_walk_10: 2631206172830160386
-      hero_walk_2: 8335699423366770600
-      hero_walk_3: 8003758613811047381
-      hero_walk_4: -1470924824021044894
-      hero_walk_5: -7228068539810515359
-      hero_walk_6: -665244040368642249
-      hero_walk_7: -2498292620558202464
-      hero_walk_8: 7516290004390650522
-      hero_walk_9: 4390097939373978554
+      Pipes_0: 6261180780860757445
+      Pipes_1: -1574087391
+      Pipes_10: 533617739
+      Pipes_11: -1368931440
+      Pipes_12: 98154266
+      Pipes_13: 1274575163
+      Pipes_14: 1148180180
+      Pipes_15: -428291356
+      Pipes_16: -1522578051
+      Pipes_2: 627011596
+      Pipes_3: -24885429
+      Pipes_4: 988795720
+      Pipes_5: -1970458614
+      Pipes_6: 899065166
+      Pipes_7: 581960716
+      Pipes_8: 733604919
+      Pipes_9: -297194483
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
