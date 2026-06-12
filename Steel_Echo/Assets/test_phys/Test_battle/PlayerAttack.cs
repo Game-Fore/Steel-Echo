@@ -8,12 +8,16 @@ public class PlayerAttack : MonoBehaviour
     public int damage = 1;
     public float recoilForce = 2f;
     private Rigidbody2D rb;
+    private PlayerAbilities abilities;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        abilities = GetComponent<PlayerAbilities>();
     }
     void Update()
     {
+        if (!abilities.attackUnlocked)
+            return;
         if (Input.GetMouseButtonDown(0))
         {
             Attack();

@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private int jumpsLeft;
 
     public float coyoteTime = 0.15f;
-    private float coyoteCounter;
+    private float coyoteTimeCounter;
 
     public float jumpBufferTime = 0.15f;
     private float jumpBufferCounter;
@@ -54,10 +54,14 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
     private bool facingRight = true;
 
+    private PlayerAbilities abilities;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        jumpsLeft = maxJumps;
+        abilities = GetComponent<PlayerAbilities>();
+
+        int allowedJumps = abilities.doubleJumpUnlocked ? 2 : 1;
+        jumpsLeft = allowedJumps;
     }
 
     void Update()
@@ -73,7 +77,9 @@ public class PlayerController : MonoBehaviour
         FastFall();
         Flip();
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if (abilities.dashUnlocked &&
+            Input.GetKeyDown(KeyCode.LeftShift) &&
+            canDash)
         {
             StartCoroutine(Dash());
         }
@@ -100,22 +106,31 @@ public class PlayerController : MonoBehaviour
 
     void CheckSurroundings()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(
+            groundCheck.position,
+            checkRadius,
+            groundLayer);
 
-        bool touchLeft = Physics2D.OverlapCircle(wallCheckLeft.position, wallCheckRadius, wallLayer);
-        bool touchRight = Physics2D.OverlapCircle(wallCheckRight.position, wallCheckRadius, wallLayer);
+        bool touchLeft = Physics2D.OverlapCircle(
+            wallCheckLeft.position,
+            wallCheckRadius,
+            wallLayer);
+
+        bool touchRight = Physics2D.OverlapCircle(
+            wallCheckRight.position,
+            wallCheckRadius,
+            wallLayer);
 
         isTouchingWall = touchLeft || touchRight;
-
         if (isGrounded)
         {
-            jumpsLeft = maxJumps;
-            coyoteCounter = coyoteTime;
-            canDash = true;
+            int allowedJumps = abilities.doubleJumpUnlocked ? 2 : 1;
+            jumpsLeft = allowedJumps;
+            coyoteTimeCounter = coyoteTime;
         }
         else
         {
-            coyoteCounter -= Time.deltaTime;
+            coyoteTimeCounter -= Time.deltaTime;
         }
     }
 
@@ -126,14 +141,29 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (isTouchingWall && !isGrounded) return;
+        if (wallJumping)
+            return;
 
-        if (jumpBufferCounter > 0 && (jumpsLeft > 0 || coyoteCounter > 0))
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            jumpBufferCounter = 0;
-            jumpsLeft--;
-        }
+        int allowedJumps = abilities.doubleJumpUnlocked ? 2 : 1;
+
+        // Страховка
+        if (jumpsLeft > allowedJumps)
+            jumpsLeft = allowedJumps;
+
+        // Нет нажатия прыжка
+        if (jumpBufferCounter <= 0)
+            return;
+
+        // Нет доступных прыжков
+        if (jumpsLeft <= 0)
+            return;
+
+        // Выполняем прыжок
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
+        jumpsLeft--;
+        jumpBufferCounter = 0;
+        coyoteTimeCounter = 0;
     }
 
     void FastFall()
@@ -146,6 +176,7 @@ public class PlayerController : MonoBehaviour
 
     void WallMovement()
     {
+
         if (isTouchingWall && !isGrounded && !wallJumping)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -154,7 +185,7 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
-            if (Input.GetKey(KeyCode.W))
+            if (abilities.wallClimbUnlocked && Input.GetKey(KeyCode.W))
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, wallClimbSpeed);
             }
