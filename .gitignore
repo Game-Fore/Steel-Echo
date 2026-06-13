@@ -16,6 +16,7 @@ UserSettings/
 *.pidb
 *.booproj
 *.svd
-
+.vs/
+Steel_Echo/.vs/
 .DS_Store
 Thumbs.db

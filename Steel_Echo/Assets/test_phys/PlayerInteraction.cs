@@ -2,19 +2,35 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public float range = 1.5f;
+    public Transform interactPoint;
+    public float range = 0.6f;
     public LayerMask interactLayer;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Collider2D hit = Physics2D.OverlapCircle(transform.position, range, interactLayer);
+            Collider2D[] hits = Physics2D.OverlapCircleAll(interactPoint.position, range, interactLayer);
 
-            if (hit != null)
+            foreach (Collider2D hit in hits)
             {
-                hit.GetComponent<IInteractable>()?.Interact();
+                IInteractable interactable = hit.GetComponent<IInteractable>();
+
+                if (interactable != null)
+                {
+                    interactable.Interact();
+                    break;
+                }
             }
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (interactPoint != null)
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireSphere(interactPoint.position, range);
         }
     }
 }
