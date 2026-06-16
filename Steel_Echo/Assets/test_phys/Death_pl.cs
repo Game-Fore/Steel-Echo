@@ -3,26 +3,30 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
 
-public class DeathZone : MonoBehaviour
+public class Death_pl : MonoBehaviour
 {
     public GameObject deathText;
+    public float restartDelay = 2f;
+
+    private bool isDead = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (isDead) return;
+
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(RestartRoutine());
+            isDead = true;
+            StartCoroutine(DeathSequence());
         }
     }
 
-    IEnumerator RestartRoutine()
+    IEnumerator DeathSequence()
     {
         deathText.SetActive(true);
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(restartDelay);
 
-        SceneManager.LoadScene(
-            SceneManager.GetActiveScene().buildIndex
-        );
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
