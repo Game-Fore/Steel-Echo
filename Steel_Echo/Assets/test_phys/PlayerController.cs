@@ -49,6 +49,9 @@ public class PlayerController : MonoBehaviour
     public float checkRadius = 0.2f;
     public LayerMask groundLayer;
 
+    [Header("Animations")]
+    private Animator anim;
+
     private Rigidbody2D rb;
     private bool isGrounded;
     private float moveInput;
@@ -59,6 +62,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         abilities = GetComponent<PlayerAbilities>();
+        anim = GetComponent<Animator>();
 
         int allowedJumps = abilities.doubleJumpUnlocked ? 2 : 1;
         jumpsLeft = allowedJumps;
@@ -76,6 +80,17 @@ public class PlayerController : MonoBehaviour
         Jump();           // потом обычный прыжок
         FastFall();
         Flip();
+
+        if (anim != null)
+        {
+            // Основные параметры
+            anim.SetFloat("Speed", Mathf.Abs(moveInput));
+            anim.SetBool("IsGrounded", isGrounded);
+            
+            // Cтены и дэш
+            anim.SetBool("IsTouchingWall", isTouchingWall && !isGrounded);
+            anim.SetBool("IsDashing", isDashing);
+        }
 
         if (abilities.dashUnlocked &&
             Input.GetKeyDown(KeyCode.LeftShift) &&
